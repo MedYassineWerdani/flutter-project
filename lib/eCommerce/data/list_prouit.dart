@@ -584,27 +584,4 @@ class ListProduit {
         quantity: 951,
         isFavorite: true),
   ];
-
-  List<Produit> get Produits {
-    return _Produits;
-  }
-
-  List<Produit> get popularProduits {
-    return _Produits.where((element) => element.isFavorite).toList();
-  }
-
-  Produit findById(String ProduitId) {
-    return _Produits.firstWhere((element) => element.id == ProduitId);
-  }
-
-  List<Produit> findByCategory(String categoryName) {
-    return _Produits.where((element) => element.produitCategoryName
-        .toLowerCase()
-        .contains(categoryName.toLowerCase())).toList();
-  }
-
-  List<Produit> findByBrand(String brandName) {
-    return _Produits.where((element) =>
-        element.brand.toLowerCase().contains(brandName.toLowerCase())).toList();
-  }
 }
