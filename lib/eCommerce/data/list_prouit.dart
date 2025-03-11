@@ -584,4 +584,10 @@ class ListProduit {
         quantity: 951,
         isFavorite: true),
   ];
+
+  List<Produit> get produits => _produits;
+
+  get _produits => null;
+
+  get _produits => null;
 }
