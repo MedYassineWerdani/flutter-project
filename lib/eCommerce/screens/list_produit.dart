@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:prjecttp0/eCommerce/model/class_produit.dart';
-
 import '../data/list_prouit.dart';
 import 'my_widgets/widget_un_produit.dart';
 

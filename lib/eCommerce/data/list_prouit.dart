@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../model/class_produit.dart';
 
 class ListProduit {
@@ -586,8 +584,4 @@ class ListProduit {
   ];
 
   List<Produit> get produits => _produits;
-
-  get _produits => null;
-
-  get _produits => null;
 }
