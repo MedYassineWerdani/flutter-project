@@ -16,18 +16,14 @@ class _ListProduitScreenState extends State<ListProduitScreen> {
       appBar: AppBar(
         title: Text("Products List Page"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: List.generate(ListProduit().produits.length, (index) {
-              return Padding(
-                padding: const EdgeInsets.only(bottom: 16.0),
-                child: WidgetProduit(produit: ListProduit().produits[index]),
-              );
-            }),
-          ),
-        ),
+      body: GridView.count(
+        crossAxisCount: 2,
+        mainAxisSpacing: 4,
+        crossAxisSpacing: 4,
+        childAspectRatio: 0.4,
+        children: List.generate(ListProduit().produits.length, (index) {
+          return WidgetProduit(produit: ListProduit().produits[index]);
+        }),
       ),
     );
   }

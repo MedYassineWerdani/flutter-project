@@ -19,12 +19,14 @@ class _WidgetProduitState extends State<WidgetProduit> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width * 0.5,
-            height: MediaQuery.of(context).size.height * 0.6,
+            // width: MediaQuery.of(context).size.width * 0.4,
+            // height: MediaQuery.of(context).size.height * 0.125,
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height * 0.35,
             child: InkWell(
               child: Image.network(
                 widget.produit.imageUrl,
-                fit: BoxFit.fill,
+                fit: BoxFit.contain,
               ),
               onTap: () {
                 print("Clicked on product: ${widget.produit.title}");

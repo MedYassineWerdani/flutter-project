@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:prjecttp0/eCommerce/data/list_prouit.dart';
+import 'package:prjecttp0/eCommerce/screens/detail_produit.dart';
 import 'package:prjecttp0/eCommerce/screens/home_page.dart';
 import 'package:prjecttp0/eCommerce/screens/list_produit.dart';
 import 'package:prjecttp0/eCommerce/screens/panier.dart';
@@ -14,10 +16,11 @@ class NavBarScreen extends StatefulWidget {
 class _NavBarScreenState extends State<NavBarScreen> {
   int selectedIndex = 0;
   List<Widget> myScreens = [
+    DetailProduitScreen(produit: ListProduit().produits[1]),
     HomeScreen(),
     ListProduitScreen(),
     PanierScreen(),
-    UserProfileScreen()
+    // UserProfileScreen()
   ];
   @override
   Widget build(BuildContext context) {
