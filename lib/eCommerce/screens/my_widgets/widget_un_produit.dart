@@ -29,7 +29,9 @@ class _WidgetProduitState extends State<WidgetProduit> {
                 fit: BoxFit.contain,
               ),
               onTap: () {
-                print("Clicked on product: ${widget.produit.title}");
+                // print("Clicked on product: ${widget.produit.title}");
+                Navigator.pushNamed(context, '/productdetails',
+                    arguments: widget.produit);
               },
             ),
           ),

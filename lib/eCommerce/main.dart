@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:prjecttp0/eCommerce/screens/detail_produit.dart';
+import 'package:prjecttp0/eCommerce/screens/home_page.dart';
+import 'package:prjecttp0/eCommerce/screens/list_produit.dart';
 import 'package:prjecttp0/eCommerce/screens/nav_bar.dart';
+import 'package:prjecttp0/eCommerce/screens/panier.dart';
+import 'package:prjecttp0/eCommerce/screens/user_info.dart';
 
 void main() {
   runApp(ECommerce());
@@ -10,6 +15,15 @@ class ECommerce extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: NavBarScreen());
+    return MaterialApp(
+      home: NavBarScreen(),
+      routes: {
+        '/home': (context) => HomeScreen(),
+        '/productlist': (context) => ListProduitScreen(),
+        '/profile': (context) => UserProfileScreen(),
+        '/shoppingcart': (context) => PanierScreen(),
+        '/productdetails': (context) => DetailProduitScreen(),
+      },
+    );
   }
 }

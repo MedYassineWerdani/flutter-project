@@ -4,6 +4,8 @@ import 'package:prjecttp0/eCommerce/constant_values/my_images.dart';
 // import 'package:prjecttp0/eCommerce/constant_values/my_images.dart';
 import 'package:prjecttp0/eCommerce/screens/my_widgets/widget_category_home.dart';
 
+import 'my_widgets/widget_menu.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -15,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Menu(),
       appBar: AppBar(
         title: Text("Home Page"),
       ),

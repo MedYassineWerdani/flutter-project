@@ -16,11 +16,11 @@ class NavBarScreen extends StatefulWidget {
 class _NavBarScreenState extends State<NavBarScreen> {
   int selectedIndex = 0;
   List<Widget> myScreens = [
-    DetailProduitScreen(produit: ListProduit().produits[1]),
+    // DetailProduitScreen(produit: ListProduit().produits[1]),
     HomeScreen(),
     ListProduitScreen(),
     PanierScreen(),
-    // UserProfileScreen()
+    UserProfileScreen()
   ];
   @override
   Widget build(BuildContext context) {
