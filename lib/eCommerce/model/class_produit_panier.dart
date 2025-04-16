@@ -4,7 +4,7 @@ class ProduitPanier {
   String description = "";
   double price = 0;
   String imageUrl = "";
-  int quantite = 0;
+  int quantite = 0; //qte commandé
   ProduitPanier({
     required this.id,
     required this.title,

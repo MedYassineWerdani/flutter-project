@@ -9,7 +9,7 @@ class Produit {
   String imageUrl;
   String brand;
   String produitCategoryName;
-  int quantity;
+  int quantity; //qte en stock
   bool isFavorite;
   Produit({
     required this.id,

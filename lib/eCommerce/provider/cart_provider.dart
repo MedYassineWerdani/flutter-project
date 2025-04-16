@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../model/class_produit_panier.dart';
+
 class PanierProvider with ChangeNotifier {
   List<ProduitPanier> _panier = [];
   List<ProduitPanier> get Panier {
