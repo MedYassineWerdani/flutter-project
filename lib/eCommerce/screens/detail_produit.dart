@@ -68,6 +68,11 @@ class _DetailProduitScreenState extends State<DetailProduitScreen> {
                               produit.title,
                               produit.description,
                               produit.imageUrl);
+
+                      Navigator.pushNamed(
+                        context,
+                        '/shoppingcart',
+                      );
                     },
                     child: Text("Add To Cart")),
                 ElevatedButton(onPressed: () {}, child: Text("Buy")),

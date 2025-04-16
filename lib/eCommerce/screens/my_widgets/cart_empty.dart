@@ -47,7 +47,12 @@ class CartEmpty extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.9,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                '/productlist',
+              );
+            },
             style: ButtonStyle(
               shape: WidgetStatePropertyAll(
                 RoundedRectangleBorder(
