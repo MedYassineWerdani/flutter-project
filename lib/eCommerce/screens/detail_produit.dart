@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prjecttp0/eCommerce/model/class_produit.dart';
+import 'package:prjecttp0/eCommerce/provider/cart_provider.dart';
+import 'package:provider/provider.dart';
 
 class DetailProduitScreen extends StatefulWidget {
   // Produit produit = ListProduit().produits[0];
@@ -59,6 +61,13 @@ class _DetailProduitScreenState extends State<DetailProduitScreen> {
                 ElevatedButton(
                     onPressed: () {
                       afficherMessage(context, "Prodiut Ajouter Au Panier");
+                      Provider.of<PanierProvider>(context, listen: false)
+                          .ajouterProduit(
+                              produit.id,
+                              produit.price,
+                              produit.title,
+                              produit.description,
+                              produit.imageUrl);
                     },
                     child: Text("Add To Cart")),
                 ElevatedButton(onPressed: () {}, child: Text("Buy")),
