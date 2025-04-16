@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:prjecttp0/eCommerce/data/list_prouit.dart';
+import 'package:prjecttp0/eCommerce/model/class_produit_panier.dart';
 import 'package:prjecttp0/eCommerce/provider/cart_provider.dart';
 import 'package:provider/provider.dart';
 import 'my_widgets/cart_empty.dart';
 import 'my_widgets/widget_produit_dans_panier.dart';
-
 
 class PanierScreen extends StatelessWidget {
   const PanierScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final contenuPanier = Provider.of<PanierProvider>(context,listen:false).Panier;
+    final List<ProduitPanier> contenuPanier =
+        Provider.of<PanierProvider>(context, listen: false).Panier;
 
-    print("xxxTAILLE PANIER=????");
+    print("xxxTAILLE PANIER=" + contenuPanier.length.toString());
 
     return contenuPanier.isEmpty
         ? Scaffold(
@@ -22,7 +24,7 @@ class PanierScreen extends StatelessWidget {
             //bottomSheet: chekcoutsection(cartProvider.totalAmount),
             appBar: AppBar(
               title: Text(
-                "Nombre Produit: ??????",
+                "Nombre Produit: " + contenuPanier.length.toString(),
               ),
               actions: [
                 IconButton(
@@ -37,7 +39,7 @@ class PanierScreen extends StatelessWidget {
                   itemCount: contenuPanier.length,
                   itemBuilder: (BuildContext ctx, int index) {
                     return WidgetProduitPanier(
-                        produitPanier: xxxxxx
+                        produitPanier: contenuPanier[index]);
                   }),
             ),
           );
