@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:prjecttp0/eCommerce/provider/cart_provider.dart';
+import 'package:provider/provider.dart';
 import 'my_widgets/cart_empty.dart';
 import 'my_widgets/widget_produit_dans_panier.dart';
 
@@ -8,6 +10,7 @@ class PanierScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final contenuPanier = Provider.of<PanierProvider>(context,listen:false).Panier;
 
     print("xxxTAILLE PANIER=????");
 
