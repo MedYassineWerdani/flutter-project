@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:prjecttp0/eCommerce/data/list_prouit.dart';
-import 'package:prjecttp0/eCommerce/screens/detail_produit.dart';
+// import 'package:prjecttp0/eCommerce/data/list_prouit.dart';
+// import 'package:prjecttp0/eCommerce/screens/detail_produit.dart';
 import 'package:prjecttp0/eCommerce/screens/home_page.dart';
 import 'package:prjecttp0/eCommerce/screens/list_produit.dart';
 import 'package:prjecttp0/eCommerce/screens/panier.dart';

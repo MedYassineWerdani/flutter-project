@@ -7,7 +7,7 @@ import 'package:prjecttp0/eCommerce/screens/nav_bar.dart';
 import 'package:prjecttp0/eCommerce/screens/panier.dart';
 import 'package:prjecttp0/eCommerce/screens/user_info.dart';
 import 'package:provider/provider.dart';
-
+  
 void main() {
   runApp(MultiProvider(
     providers: [ChangeNotifierProvider(create: (context) => PanierProvider())],
