@@ -15,9 +15,21 @@ void main() {
   ));
 }
 
-class ECommerce extends StatelessWidget {
+class ECommerce extends StatefulWidget {
   const ECommerce({super.key});
 
+  @override
+  State<ECommerce> createState() => _ECommerceState();
+}
+
+class _ECommerceState extends State<ECommerce> {
+  @override
+  void initState() {
+    ProxyProvider0.of<PanierProvider>
+    super.initState();
+  
+    
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
